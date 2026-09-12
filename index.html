@@ -59,6 +59,7 @@
       <button class="desktop-tab rounded-full px-7 py-3 bg-moss text-white" data-page="schedule"><i class="fa-regular fa-calendar mr-2"></i>婚禮行程</button>
       <button class="desktop-tab rounded-full px-7 py-3 text-stone-500" data-page="flights"><i class="fa-solid fa-plane mr-2"></i>建議機票</button>
       <button class="desktop-tab rounded-full px-7 py-3 text-stone-500" data-page="guide"><i class="fa-regular fa-map mr-2"></i>澳門攻略</button>
+      <button class="desktop-tab rounded-full px-7 py-3 text-stone-500" data-page="notes"><i class="fa-regular fa-note-sticky mr-2"></i>行前須知</button>
     </nav>
   </header>
 
@@ -74,9 +75,9 @@
             </div>
           </div>
           <div class="ml-7 border-l border-line pl-7 space-y-8">
-            <div class="timeline-item relative important"><p class="text-clay font-semibold text-lg">16:00</p><h3 class="font-medium mt-1">麻將間入席</h3><p class="text-sm text-stone-500 mt-1">提早抵達、輕鬆暖場</p><span class="inline-flex mt-2 items-center gap-1 rounded-full bg-[#F3E0D9] text-clay px-2.5 py-1 text-xs"><i class="fa-solid fa-bell"></i> 建議提前抵達</span><span class="inline-flex mt-2 ml-2 items-center gap-1 rounded-full bg-[#EFE6DA] text-ink px-2.5 py-1 text-xs"><i class="fa-solid fa-location-dot"></i> 2F 準備廳</span></div>
-            <div class="timeline-item relative"><p class="text-sage font-semibold text-lg">18:00</p><h3 class="font-medium mt-1">賓客入席</h3><p class="text-sm text-stone-500 mt-1">拍照、簽到並找到座位</p><span class="inline-flex mt-2 items-center gap-1 rounded-full bg-[#DDE9DC] text-moss px-2.5 py-1 text-xs"><i class="fa-solid fa-location-dot"></i> 2F 幸福廳</span></div>
-            <div class="timeline-item relative important"><p class="text-clay font-semibold text-lg">19:00</p><h3 class="font-medium mt-1">婚宴開席</h3><p class="text-sm text-stone-500 mt-1">準時共享婚宴與祝福</p></div>
+            <div class="timeline-item relative important"><p class="text-clay font-semibold text-lg">16:00</p><h3 class="font-medium mt-1">麻將間入席</h3><p class="text-sm text-stone-500 mt-1">提早抵達、輕鬆暖場</p><span class="inline-flex mt-2 items-center gap-1 rounded-full bg-[#F3E0D9] text-clay px-2.5 py-1 text-xs"><i class="fa-solid fa-bell"></i> 建議提前抵達</span></div>
+            <div class="timeline-item relative"><p class="text-sage font-semibold text-lg">18:00</p><h3 class="font-medium mt-1">賓客入席</h3><p class="text-sm text-stone-500 mt-1">拍照、簽到並找到座位</p></div>
+            <div class="timeline-item relative important"><p class="text-clay font-semibold text-lg">18:30</p><h3 class="font-medium mt-1">婚宴開席</h3><p class="text-sm text-stone-500 mt-1">準時共享婚宴與祝福</p></div>
             <div class="timeline-item relative"><p class="text-sage font-semibold text-lg">21:30</p><h3 class="font-medium mt-1">送客合影</h3><p class="text-sm text-stone-500 mt-1">別忘了留下珍貴合照</p></div>
           </div>
         </article>
@@ -97,10 +98,18 @@
     </section>
 
     <section id="flights" class="page" aria-labelledby="flights-title">
-      <div class="flex flex-wrap items-end justify-between gap-4 mb-7"><div><p class="text-xs tracking-widest text-sage mb-2">FLIGHT NOTES</p><h2 id="flights-title" class="font-serif text-2xl md:text-3xl"><span class="brush-label">當天建議機票</span></h2><p class="text-sm text-stone-500 mt-3">留足時間，讓旅程從容地開始。</p></div><button id="addFlight" class="rounded-full bg-moss text-white px-5 py-3 text-sm shadow-soft hover:-translate-y-0.5 hover:bg-ink transition"><i class="fa-solid fa-plus mr-2"></i>新增航班</button></div>
+      <div class="flex flex-wrap items-end justify-between gap-4 mb-7"><div><p class="text-xs tracking-widest text-sage mb-2">FLIGHT & TRANSPORT</p><h2 id="flights-title" class="font-serif text-2xl md:text-3xl"><span class="brush-label">當天建議機票</span></h2><p class="text-sm text-stone-500 mt-3">留足時間，讓旅程從容地開始。</p></div></div>
       <div class="grid md:grid-cols-[.72fr_1.28fr] gap-6">
-        <aside class="relative overflow-hidden bg-[#DCE7E2] rounded-[1.8rem] p-6 h-fit shadow-soft border border-white/70"><div class="absolute -right-6 -top-8 text-[7rem] text-white/40 rotate-12"><i class="fa-solid fa-cloud"></i></div><span class="relative w-12 h-12 rounded-full bg-paper grid place-items-center text-clay shadow"><i class="fa-solid fa-plane-departure"></i></span><h3 class="font-serif text-xl mt-4">抵達時間建議</h3><p class="text-base leading-8 text-stone-600 mt-3">若婚禮當天抵達澳門，建議選擇<strong class="text-ink brush-label">中午 12:30 前落地</strong>的航班。預留入境、領行李及前往飯店的緩衝，避免影響 16:00 麻將間入席。</p><div class="border-t border-[#B9CEC5] mt-5 pt-5"><p class="text-sm text-stone-500">建議單程票價範疇</p><p class="text-2xl font-serif mt-1 text-moss">NT$ 2,500–6,000</p><p class="text-xs text-stone-500 mt-2">僅為規劃區間，連假、行李與臨近出發可能更高。</p></div></aside>
-        <div id="flightList" class="space-y-4"></div>
+        <aside class="relative overflow-hidden bg-[#DCE7E2] rounded-[1.8rem] p-6 h-fit shadow-soft border border-white/70"><div class="absolute -right-6 -top-8 text-[7rem] text-white/40 rotate-12"><i class="fa-solid fa-cloud"></i></div><span class="relative w-12 h-12 rounded-full bg-paper grid place-items-center text-clay shadow"><i class="fa-solid fa-plane-departure"></i></span><h3 class="font-serif text-xl mt-4">抵達時間建議</h3><p class="text-base leading-8 text-stone-600 mt-3">若婚禮當天抵達澳門，建議選擇<strong class="text-ink brush-label">中午 12:30 前落地</strong>的航班。預留入境、領行李及前往飯店的緩衝，避免影響 16:00 麻將間入席。</p><div class="border-t border-[#B9CEC5] mt-5 pt-5"><p class="text-sm text-stone-500">建議單程票價範疇</p><p class="text-2xl font-serif mt-1 text-moss">NT$ 2,500–6,000</p><p class="text-xs text-stone-500 mt-2">僅為規劃區間，連假、行李與臨近出發可能更高。</p></div><div class="border-t border-[#B9CEC5] mt-5 pt-5"><p class="text-sm text-stone-500 mb-3">參考航班（點卡片看完整資訊）</p><div id="flightList" class="space-y-2.5"></div></div></aside>
+        <div class="space-y-5">
+          <article class="paper-card relative rounded-[1.8rem] p-6 md:p-7">
+            <div class="flex items-center gap-3 mb-5"><div class="w-10 h-10 bg-rice rounded-full grid place-items-center text-sage"><i class="fa-solid fa-route"></i></div><div><h3 class="font-medium">機場前往雅辰交通</h3><p class="text-xs text-stone-400">澳門國際機場 → 澳門雅辰酒店</p></div></div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="bg-rice rounded-2xl p-4 border border-line"><i class="fa-solid fa-taxi text-clay"></i><p class="font-medium mt-2">計程車</p><p class="text-sm text-stone-600 mt-1 leading-6">車程約 15–20 分鐘。車資約澳門幣 100–130 元（機場上車加收 8 元附加費，大件行李每件加 3 元）。</p></div>
+              <div class="bg-rice rounded-2xl p-4 border border-line"><i class="fa-solid fa-bus text-moss"></i><p class="font-medium mt-2">公共巴士 AP1</p><p class="text-sm text-stone-600 mt-1 leading-6">於「外港碼頭」站下車，步行約 5–10 分鐘可達。車資澳門幣 6 元，<span class="text-clay">不設找零</span>，請自備零錢或使用澳門通。</p></div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -114,7 +123,18 @@
         <article class="paper-card relative rounded-[1.8rem] p-6 hover:-translate-y-1 transition"><span class="inline-block rounded-full bg-[#DDE9DC] px-3 py-1 text-xs text-moss">02 · 城市散步</span><h3 class="font-serif text-xl mt-3">議事亭前地</h3><p class="text-base text-stone-600 leading-8 mt-3">黑白相間的波浪石地由葡式碎石鋪成，廣場四周保留新古典主義建築。建議清晨造訪，能避開人潮，也更容易看見老城日常。</p><p class="text-sm text-sage mt-4"><i class="fa-solid fa-route mr-1"></i> 可一路步行串聯玫瑰堂與大三巴。</p></article>
         <article class="paper-card relative rounded-[1.8rem] p-6 hover:-translate-y-1 transition"><span class="inline-block rounded-full bg-[#DCE9ED] px-3 py-1 text-xs text-moss">03 · 葡式風景</span><h3 class="font-serif text-xl mt-3">龍環葡韻</h3><p class="text-base text-stone-600 leading-8 mt-3">一列薄荷綠葡式住宅，曾是離島高級官員寓所。如今改為展館，與濕地、木棧道構成氹仔一帶最舒服的午後散步路線。</p><p class="text-sm text-sage mt-4"><i class="fa-regular fa-clock mr-1"></i> 黃昏光線柔和，適合拍照。</p></article>
         <article class="paper-card relative rounded-[1.8rem] p-6 hover:-translate-y-1 transition"><span class="inline-block rounded-full bg-[#F5DFC6] px-3 py-1 text-xs text-clay">04 · 在地味道</span><h3 class="font-serif text-xl mt-3">官也街</h3><p class="text-base text-stone-600 leading-8 mt-3">短短百餘公尺聚集杏仁餅、蛋撻、豬扒包與葡國菜。熱門店家排隊較久，若想慢慢逛，可由巷弄繞往氹仔舊城區。</p><p class="text-sm text-sage mt-4"><i class="fa-solid fa-utensils mr-1"></i> 伴手禮先試吃，最後一天再購買。</p></article>
-        <article class="bg-[#3E5749] text-white rounded-[1.8rem] p-6 shadow-soft md:col-span-2 relative overflow-hidden"><div class="absolute right-6 top-4 text-white/10 text-7xl"><i class="fa-solid fa-leaf"></i></div><span class="text-xs text-[#E7C98F]">05 · 旅行小抄</span><h3 class="font-serif text-xl mt-2">交通與支付</h3><div class="grid sm:grid-cols-3 gap-4 mt-4 text-sm"><div class="bg-white/10 rounded-2xl p-4 border border-white/10"><i class="fa-solid fa-bus text-[#E7C98F]"></i><p class="font-medium mt-2">移動</p><p class="text-white/65 mt-1 leading-6">公車路線密集；飯店接駁車也很方便。</p></div><div class="bg-white/10 rounded-2xl p-4 border border-white/10"><i class="fa-solid fa-coins text-[#E7C98F]"></i><p class="font-medium mt-2">貨幣</p><p class="text-white/65 mt-1 leading-6">澳門幣為主，多數地方亦收港幣。</p></div><div class="bg-white/10 rounded-2xl p-4 border border-white/10"><i class="fa-solid fa-cloud-sun text-[#E7C98F]"></i><p class="font-medium mt-2">準備</p><p class="text-white/65 mt-1 leading-6">帶舒適鞋與薄外套，室內冷氣偏強。</p></div></div></article>
+      </div>
+    </section>
+
+    <section id="notes" class="page" aria-labelledby="notes-title">
+      <div class="mb-7"><p class="text-xs tracking-widest text-sage mb-2">BEFORE YOU GO</p><h2 id="notes-title" class="font-serif text-2xl md:text-3xl"><span class="brush-label">行前須知</span></h2><p class="text-sm text-stone-500 mt-3">出發前先讀一遍，旅途更安心。</p></div>
+      <div class="grid lg:grid-cols-[1.3fr_.7fr] gap-6">
+        <article class="bg-[#3E5749] text-white rounded-[1.8rem] p-6 md:p-8 shadow-soft relative overflow-hidden h-fit"><div class="absolute right-6 top-4 text-white/10 text-7xl"><i class="fa-solid fa-leaf"></i></div><span class="text-xs text-[#E7C98F]">旅行小抄</span><h3 class="font-serif text-xl mt-2">交通、支付與生活</h3><div class="grid sm:grid-cols-3 gap-4 mt-4 text-sm"><div class="bg-white/10 rounded-2xl p-4 border border-white/10"><i class="fa-solid fa-bus text-[#E7C98F]"></i><p class="font-medium mt-2">交通</p><p class="text-white/65 mt-1 leading-6">公車路線密集；多數飯店提供免費接駁車，時刻表可於櫃檯查詢。</p></div><div class="bg-white/10 rounded-2xl p-4 border border-white/10"><i class="fa-solid fa-coins text-[#E7C98F]"></i><p class="font-medium mt-2">支付</p><p class="text-white/65 mt-1 leading-6">澳門幣（MOP）為主，人民幣、港幣多數店家亦可使用；Visa 卡通用性高。</p></div><div class="bg-white/10 rounded-2xl p-4 border border-white/10"><i class="fa-solid fa-plug text-[#E7C98F]"></i><p class="font-medium mt-2">生活</p><p class="text-white/65 mt-1 leading-6">電壓 220V，插座為三孔英式（G 型），建議自備轉接頭。</p></div></div></article>
+        <article class="paper-card relative rounded-[1.8rem] p-6 h-fit">
+          <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rice rounded-full grid place-items-center text-sage"><i class="fa-solid fa-pen"></i></div><div><h3 class="font-medium">我的行前備忘</h3><p class="text-xs text-stone-400">內容會保留在這台裝置</p></div></div>
+          <textarea id="travelMemo" rows="6" placeholder="例：證件、藥品、充電器、待辦清單……" class="mt-4 w-full resize-none bg-rice border border-line rounded-xl p-3 text-sm"></textarea>
+          <p id="travelMemoStatus" class="text-xs text-sage mt-2 opacity-0 transition">已自動儲存</p>
+        </article>
       </div>
     </section>
   </main>
@@ -123,23 +143,12 @@
     <button class="nav-btn active flex flex-col items-center min-w-20 text-stone-400" data-page="schedule"><span class="nav-icon w-10 h-8 grid place-items-center rounded-full transition"><i class="fa-regular fa-calendar"></i></span><span class="text-[11px] mt-1">行程</span></button>
     <button class="nav-btn flex flex-col items-center min-w-20 text-stone-400" data-page="flights"><span class="nav-icon w-10 h-8 grid place-items-center rounded-full transition"><i class="fa-solid fa-plane"></i></span><span class="text-[11px] mt-1">機票</span></button>
     <button class="nav-btn flex flex-col items-center min-w-20 text-stone-400" data-page="guide"><span class="nav-icon w-10 h-8 grid place-items-center rounded-full transition"><i class="fa-regular fa-map"></i></span><span class="text-[11px] mt-1">攻略</span></button>
+    <button class="nav-btn flex flex-col items-center min-w-20 text-stone-400" data-page="notes"><span class="nav-icon w-10 h-8 grid place-items-center rounded-full transition"><i class="fa-regular fa-note-sticky"></i></span><span class="text-[11px] mt-1">須知</span></button>
   </nav>
-
-  <div id="flightModal" class="hidden fixed inset-0 z-[60] bg-ink/40 backdrop-blur-sm p-4 items-end sm:items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <form id="flightForm" class="bg-paper rounded-[1.5rem] p-6 w-full max-w-md shadow-soft">
-      <div class="flex justify-between items-center"><h3 id="modalTitle" class="font-serif text-xl">新增航班</h3><button type="button" id="closeModal" class="w-9 h-9 rounded-full bg-rice"><i class="fa-solid fa-xmark"></i></button></div>
-      <div class="grid grid-cols-2 gap-3 mt-5"><label class="text-xs text-stone-500">航空公司<input name="airline" required placeholder="例：星宇航空" class="mt-1 w-full bg-white border border-line rounded-xl p-3 text-sm" /></label><label class="text-xs text-stone-500">航班編號<input name="number" placeholder="例：JX205" class="mt-1 w-full bg-white border border-line rounded-xl p-3 text-sm" /></label><label class="text-xs text-stone-500">起飛時間<input name="depart" type="time" required class="mt-1 w-full bg-white border border-line rounded-xl p-3 text-sm" /></label><label class="text-xs text-stone-500">抵達時間<input name="arrive" type="time" required class="mt-1 w-full bg-white border border-line rounded-xl p-3 text-sm" /></label></div>
-      <label class="block text-xs text-stone-500 mt-3">參考價格（NT$）<input name="price" type="number" min="0" placeholder="3500" class="mt-1 w-full bg-white border border-line rounded-xl p-3 text-sm" /></label>
-      <button class="mt-5 w-full bg-moss text-white rounded-xl py-3 font-medium">儲存航班</button>
-    </form>
-  </div>
 
   <script>
     const STORAGE_KEY = 'jingqiWeddingApp_v1';
-    const defaultData = { memo:'', flights:[
-      {airline:'早班機建議', number:'請自行填入', depart:'08:00', arrive:'10:00', price:'3500'},
-      {airline:'午間備選', number:'請自行填入', depart:'09:30', arrive:'11:30', price:'4500'}
-    ]};
+    const defaultData = { memo:'', travelMemo:'' };
     let data;
     try { data = {...defaultData, ...JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}')}; } catch { data = structuredClone(defaultData); }
     const save = () => localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
@@ -157,12 +166,17 @@
     let statusTimer;
     memo.addEventListener('input',()=>{ data.memo=memo.value; save(); memoStatus.classList.remove('opacity-0'); clearTimeout(statusTimer); statusTimer=setTimeout(()=>memoStatus.classList.add('opacity-0'),1400); });
 
+    const travelMemo = document.getElementById('travelMemo'), travelMemoStatus=document.getElementById('travelMemoStatus');
+    travelMemo.value=data.travelMemo || '';
+    let travelStatusTimer;
+    travelMemo.addEventListener('input',()=>{ data.travelMemo=travelMemo.value; save(); travelMemoStatus.classList.remove('opacity-0'); clearTimeout(travelStatusTimer); travelStatusTimer=setTimeout(()=>travelMemoStatus.classList.add('opacity-0'),1400); });
+
     const weddingEvent = {
       title: '菁騏婚禮',
       start: '20270126T160000',
       end: '20270126T213000',
-      location: '澳門雅辰酒店（2F 幸福廳）',
-      description: '16:00 麻將間入席（2F 準備廳）\\n18:00 賓客入席（2F 幸福廳）\\n19:00 婚宴開席\\n21:30 送客合影'
+      location: '澳門雅辰酒店',
+      description: '16:00 麻將間入席\\n18:00 賓客入席\\n18:30 婚宴開席\\n21:30 送客合影'
     };
     document.getElementById('addToGoogleCal').addEventListener('click', () => {
       const params = new URLSearchParams({
@@ -196,28 +210,41 @@
       document.body.removeChild(link);
     });
 
+    const FLIGHTS = [
+      { airline:'星宇航空', code:'JX201', depart:'N/A', arrive:'N/A', link:'https://www.starlux-airlines.com/zh-TW' },
+      { airline:'澳門航空', code:'NX631', depart:'N/A', arrive:'N/A', link:'https://www.airmacau.com.mo/' },
+      { airline:'長榮航空', code:'BR801', depart:'N/A', arrive:'N/A', link:'https://www.evaair.com/zh-tw/' },
+      { airline:'澳門航空', code:'NX609', depart:'N/A', arrive:'N/A', link:'https://www.airmacau.com.mo/' }
+    ];
     const flightList=document.getElementById('flightList');
     function renderFlights(){
-      flightList.innerHTML='';
-      if(!data.flights.length){ flightList.innerHTML='<div class="bg-paper rounded-3xl p-8 text-center text-stone-400">尚未加入航班</div>'; return; }
-      data.flights.forEach((f,i)=>{
-        const card=document.createElement('article');
-        card.className='paper-card relative rounded-[1.8rem] p-5 md:p-6 hover:-translate-y-0.5 transition';
-        card.innerHTML=`<div class="flex justify-between gap-3"><div><p class="font-medium">${escapeHtml(f.airline)} <span class="text-xs text-stone-400 ml-1">${escapeHtml(f.number||'')}</span></p><div class="flex items-center gap-4 mt-5"><div><p class="text-2xl font-serif">${escapeHtml(f.depart)}</p><p class="text-xs text-stone-400">出發</p></div><div class="flex-1 min-w-20 flex items-center text-stone-300"><span class="h-px bg-line flex-1"></span><i class="fa-solid fa-plane text-xs mx-2"></i><span class="h-px bg-line flex-1"></span></div><div><p class="text-2xl font-serif">${escapeHtml(f.arrive)}</p><p class="text-xs text-stone-400">抵達</p></div></div></div><div class="text-right"><button data-delete="${i}" class="text-stone-300 hover:text-clay p-2" aria-label="刪除航班"><i class="fa-regular fa-trash-can"></i></button><p class="text-sm text-clay mt-5">約 NT$ ${Number(f.price||0).toLocaleString()}</p></div></div>`;
-        flightList.appendChild(card);
+      flightList.innerHTML = FLIGHTS.map((f,i)=>`
+        <div class="bg-white/70 rounded-2xl border border-white overflow-hidden">
+          <button type="button" data-toggle="${i}" class="w-full flex items-center justify-between gap-2 p-3 text-left">
+            <div class="flex items-center gap-2">
+              <div><p class="text-sm font-serif">${f.depart}</p><p class="text-[10px] text-stone-400">出發</p></div>
+              <i class="fa-solid fa-plane text-xs text-stone-300"></i>
+              <div><p class="text-sm font-serif">${f.arrive}</p><p class="text-[10px] text-stone-400">抵達</p></div>
+            </div>
+            <div class="flex items-center gap-2"><p class="text-xs font-medium text-ink">${f.airline}</p><i class="fa-solid fa-chevron-down text-[10px] text-stone-400 transition-transform" data-chevron="${i}"></i></div>
+          </button>
+          <div class="hidden px-3 pb-3" data-detail="${i}">
+            <div class="border-t border-line/70 pt-3 flex items-center justify-between gap-2 text-xs text-stone-500">
+              <span>${f.airline} · ${f.code}</span>
+              <a href="${f.link}" target="_blank" rel="noopener" class="inline-flex items-center gap-1 rounded-full bg-moss text-white px-3 py-1.5 text-xs whitespace-nowrap">前往官網訂票 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+      flightList.querySelectorAll('[data-toggle]').forEach(btn=>{
+        btn.addEventListener('click',()=>{
+          const i=btn.dataset.toggle;
+          flightList.querySelector(`[data-detail="${i}"]`).classList.toggle('hidden');
+          flightList.querySelector(`[data-chevron="${i}"]`).classList.toggle('rotate-180');
+        });
       });
-      flightList.querySelectorAll('[data-delete]').forEach(btn=>btn.addEventListener('click',()=>{ if(confirm('要刪除這筆航班嗎？')){ data.flights.splice(Number(btn.dataset.delete),1); save(); renderFlights(); } }));
     }
-    function escapeHtml(v=''){ const d=document.createElement('div'); d.textContent=String(v); return d.innerHTML; }
     renderFlights();
-
-    const modal=document.getElementById('flightModal'), form=document.getElementById('flightForm');
-    function setModal(show){ modal.classList.toggle('hidden',!show); modal.classList.toggle('flex',show); if(show) setTimeout(()=>form.elements.airline.focus(),50); }
-    document.getElementById('addFlight').addEventListener('click',()=>setModal(true));
-    document.getElementById('closeModal').addEventListener('click',()=>setModal(false));
-    modal.addEventListener('click',e=>{ if(e.target===modal)setModal(false); });
-    document.addEventListener('keydown',e=>{ if(e.key==='Escape')setModal(false); });
-    form.addEventListener('submit',e=>{ e.preventDefault(); const fd=new FormData(form); data.flights.push(Object.fromEntries(fd.entries())); save(); renderFlights(); form.reset(); setModal(false); });
   </script>
 </body>
 </html>
