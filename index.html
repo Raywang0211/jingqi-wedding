@@ -68,7 +68,7 @@
   <main class="max-w-6xl mx-auto px-5 mt-8 md:mt-12">
     <section id="schedule" class="page active" aria-labelledby="schedule-title">
       <div class="grid lg:grid-cols-[1.08fr_.92fr] gap-6">
-        <article class="paper-card relative rounded-[1.8rem] p-6 md:p-8">
+        <article class="order-2 lg:order-none lg:row-span-2 paper-card relative rounded-[1.8rem] p-6 md:p-8">
           <div class="flex flex-wrap justify-between gap-4 mb-8">
             <div><p class="text-xs text-sage tracking-widest mb-2">WEDDING DAY</p><h2 id="schedule-title" class="font-serif text-2xl md:text-3xl"><span class="brush-label">今天，為幸福乾杯</span></h2><p class="mt-2 text-base font-medium text-clay"><i class="fa-regular fa-calendar-heart mr-1"></i> 2027 年 1 月 26 日（星期二）</p></div>
             <div class="flex flex-wrap gap-2">
@@ -83,19 +83,17 @@
             <div class="timeline-item relative"><p class="text-sage font-semibold text-lg">21:30</p><h3 class="font-medium mt-1">送客合影</h3><p class="text-sm text-stone-500 mt-1">別忘了留下珍貴合照</p></div>
           </div>
         </article>
-        <div class="space-y-6">
-          <article class="bg-moss text-white rounded-[1.8rem] p-6 md:p-8 leaf-shadow overflow-hidden relative">
-            <div class="absolute -right-8 -top-8 w-36 h-36 rounded-full bg-[#91A487]/20"></div><div class="absolute right-6 top-5 text-white/15 text-6xl rotate-12"><i class="fa-solid fa-leaf"></i></div>
-            <p class="text-xs text-white/60 tracking-widest mb-3">VENUE</p><h2 class="font-serif text-2xl">澳門雅辰酒店</h2><p class="mt-2 text-white/75">錢納利廳 · 2F</p>
-            <p class="text-base text-white/70 mt-5 leading-7">澳門友誼大馬路 956–1110 號，鄰近金蓮花廣場與漁人碼頭。週末與活動期間建議多預留 20–30 分鐘。</p>
-            <a href="https://www.google.com/maps/search/?api=1&query=Artyzen+Grand+Lapa+Macau" target="_blank" rel="noopener" class="mt-6 w-full inline-flex justify-center items-center gap-2 rounded-xl bg-white text-moss px-4 py-3 font-medium hover:bg-rice transition"><i class="fa-solid fa-location-arrow"></i> Google Maps 導航</a>
-          </article>
-          <article class="paper-card relative rounded-[1.8rem] p-6">
-            <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rice rounded-full grid place-items-center text-sage"><i class="fa-solid fa-pen"></i></div><div><h3 class="font-medium">我的備忘</h3><p class="text-xs text-stone-400">內容會保留在這台裝置</p></div></div>
-            <textarea id="memo" rows="4" placeholder="例：禮物、房號、同行親友電話……" class="mt-4 w-full resize-none bg-rice border border-line rounded-xl p-3 text-sm"></textarea>
-            <p id="memoStatus" class="text-xs text-sage mt-2 opacity-0 transition">已自動儲存</p>
-          </article>
-        </div>
+        <article class="order-1 lg:order-none bg-moss text-white rounded-[1.8rem] p-6 md:p-8 leaf-shadow overflow-hidden relative">
+          <div class="absolute -right-8 -top-8 w-36 h-36 rounded-full bg-[#91A487]/20"></div><div class="absolute right-6 top-5 text-white/15 text-6xl rotate-12"><i class="fa-solid fa-leaf"></i></div>
+          <p class="text-xs text-white/60 tracking-widest mb-3">VENUE</p><h2 class="font-serif text-2xl">澳門雅辰酒店</h2><p class="mt-2 text-white/75">錢納利廳 · 2F</p>
+          <p class="text-base text-white/70 mt-5 leading-7">澳門友誼大馬路 956–1110 號，鄰近金蓮花廣場與漁人碼頭。週末與活動期間建議多預留 20–30 分鐘。</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Artyzen+Grand+Lapa+Macau" target="_blank" rel="noopener" class="mt-6 w-full inline-flex justify-center items-center gap-2 rounded-xl bg-white text-moss px-4 py-3 font-medium hover:bg-rice transition"><i class="fa-solid fa-location-arrow"></i> Google Maps 導航</a>
+        </article>
+        <article class="order-3 lg:order-none paper-card relative rounded-[1.8rem] p-6">
+          <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rice rounded-full grid place-items-center text-sage"><i class="fa-solid fa-pen"></i></div><div><h3 class="font-medium">我的備忘</h3><p class="text-xs text-stone-400">內容會保留在這台裝置</p></div></div>
+          <textarea id="memo" rows="4" placeholder="例：禮物、房號、同行親友電話……" class="mt-4 w-full resize-none bg-rice border border-line rounded-xl p-3 text-sm"></textarea>
+          <p id="memoStatus" class="text-xs text-sage mt-2 opacity-0 transition">已自動儲存</p>
+        </article>
       </div>
     </section>
 
@@ -125,7 +123,12 @@
     <div id="flightModal" class="hidden fixed inset-0 z-[60] bg-ink/40 backdrop-blur-sm p-4 items-end sm:items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <form id="flightForm" class="bg-paper rounded-[1.5rem] p-6 w-full max-w-md shadow-soft">
         <div class="flex justify-between items-center"><h3 id="modalTitle" class="font-serif text-xl">新增航班</h3><button type="button" id="closeModal" class="w-9 h-9 rounded-full bg-rice"><i class="fa-solid fa-xmark"></i></button></div>
-        <div class="grid grid-cols-2 gap-3 mt-5"><label class="text-xs text-stone-500">航空公司<input name="airline" required placeholder="例：星宇航空" class="mt-1 w-full bg-white border border-line rounded-xl p-3 text-sm" /></label><label class="text-xs text-stone-500">航班編號<input name="number" placeholder="例：JX205" class="mt-1 w-full bg-white border border-line rounded-xl p-3 text-sm" /></label><label class="text-xs text-stone-500">起飛時間<input name="depart" type="time" required class="mt-1 w-full bg-white border border-line rounded-xl p-3 text-sm" /></label><label class="text-xs text-stone-500">抵達時間<input name="arrive" type="time" required class="mt-1 w-full bg-white border border-line rounded-xl p-3 text-sm" /></label></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-5">
+          <label class="text-xs text-stone-500 min-w-0">航空公司<input name="airline" required placeholder="例：星宇航空" class="mt-1 w-full min-w-0 bg-white border border-line rounded-xl p-3 text-sm" /></label>
+          <label class="text-xs text-stone-500 min-w-0">航班編號<input name="number" placeholder="例：JX205" class="mt-1 w-full min-w-0 bg-white border border-line rounded-xl p-3 text-sm" /></label>
+          <label class="text-xs text-stone-500 min-w-0">起飛時間<input name="depart" type="time" required class="mt-1 w-full min-w-0 bg-white border border-line rounded-xl p-3 text-sm" /></label>
+          <label class="text-xs text-stone-500 min-w-0">抵達時間<input name="arrive" type="time" required class="mt-1 w-full min-w-0 bg-white border border-line rounded-xl p-3 text-sm" /></label>
+        </div>
         <button class="mt-5 w-full bg-moss text-white rounded-xl py-3 font-medium">儲存航班</button>
       </form>
     </div>
