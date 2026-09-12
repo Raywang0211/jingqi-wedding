@@ -20,7 +20,7 @@
     .page { display:none; animation: fade .28s ease; }
     .page.active { display:block; }
     @keyframes fade { from { opacity:0; transform:translateY(5px) } to { opacity:1; transform:none } }
-    .timeline-item::before { content:""; position:absolute; left:-1.75rem; top:.46rem; width:.82rem; height:.82rem; border-radius:50%; background:#76866C; border:2px solid #FFFDF7; box-shadow:0 0 0 4px #E4E7D8; }
+    .timeline-item::before { content:""; position:absolute; left:calc(-1.75rem - .41rem); top:.46rem; width:.82rem; height:.82rem; border-radius:50%; background:#76866C; border:2px solid #FFFDF7; box-shadow:0 0 0 4px #E4E7D8; }
     .timeline-item.important::before { background:#B97962; }
     .nav-btn.active { color:#52604E; }
     .nav-btn.active .nav-icon { background:#DFE8DA; transform:translateY(-3px) rotate(-2deg); }
