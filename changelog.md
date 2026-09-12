@@ -215,3 +215,16 @@
 - `index.html` 檔案大小由約 5.5MB 大幅縮小至約 40KB
 - 已用本機靜態伺服器重新驗證所有圖片（橫幅、地圖、景點與美食照片）皆能正確載入，功能與外觀與內嵌版本完全一致
 - 提醒：`image/web/macau-illustrated-map.jpg` 是先前版本地圖圖片，換成 `trip-map.jpg` 後已無任何頁面引用，目前是未使用的孤兒檔案，留著沒有影響但可視需要自行清理
+
+## 2026-09-13（第十六次修正）
+
+### 加入 PWA 支援，可從 iPhone「加入主畫面」變成類 App 體驗
+使用者詢問如何把這個網站變成 iOS app，考量到不需要 Apple Developer 帳號、不需要 Xcode、不需要 App Store 審核，選擇做成 PWA（Progressive Web App），賓客直接用 Safari 開啟網站後「加入主畫面」即可，效果等同一個獨立 App 圖示。
+
+- **新增 App 圖示**：設計了一顆與網站既有愛心圖示（首頁右上角、地圖飯店標記）同款式的愛心圖示，莫斯綠底、暖膚色愛心，輸出成 `image/web/icon-192.png`、`icon-512.png`（Android／一般 PWA 用）與 `apple-touch-icon.png`（iOS 主畫面圖示，180×180）、`favicon-32.png`／`favicon-16.png`（瀏覽器分頁圖示）
+- **新增 `manifest.json`**：定義 App 名稱、圖示、`display: standalone`（全螢幕無網址列）、直向鎖定、背景色與主題色
+- **`index.html` 加入對應 meta 標籤**：`<link rel="manifest">`、`apple-touch-icon`、`apple-mobile-web-app-capable`、`apple-mobile-web-app-status-bar-style`（black-translucent，讓內容延伸到狀態列下方）、`apple-mobile-web-app-title`
+- **新增 `sw.js`（Service Worker）**：首次連線時會把 `index.html`、`style.css`、`script.js`、`manifest.json` 與全部圖片快取起來，之後即使賓客在澳門當地沒有網路或訊號不穩，已安裝過的頁面仍能正常開啟並顯示完整內容（採用「先讀快取、背景更新」策略，網路恢復時會自動抓取最新版本）
+- `script.js` 尾端加入 Service Worker 註冊程式碼
+- 已透過本機伺服器實測：manifest 可正確解析、Service Worker 成功註冊並完整快取 26 項資源，頁面外觀與功能不受影響
+- 使用方式：GitHub Pages 部署後，賓客用 iPhone Safari 開啟網址 → 分享鈕 →「加入主畫面」，即可在桌面看到「菁騏婚禮」圖示，點開後以全螢幕獨立 App 樣式呈現（無 Safari 網址列）

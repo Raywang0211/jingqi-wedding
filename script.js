@@ -190,3 +190,9 @@ flightForm.addEventListener('submit', e=>{
   data.myFlights.push(Object.fromEntries(fd.entries()));
   save(); renderMyFlights(); flightForm.reset(); setFlightModal(false);
 });
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  });
+}
