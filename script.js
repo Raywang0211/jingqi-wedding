@@ -115,7 +115,9 @@ document.getElementById('addToAppleCal').addEventListener('click', () => {
 const FLIGHTS = [
   { airline:'星宇航空', code:'JX201', depart:'07:50', arrive:'09:45', from:'桃園', to:'澳門', link:'https://www.starlux-airlines.com/zh-TW' },
   { airline:'澳門航空', code:'NX631', depart:'09:10', arrive:'11:00', from:'桃園', to:'澳門', link:'https://www.airmacau.com.mo/' },
+  { airline:'澳門航空', code:'NX631', depart:'10:35', arrive:'12:35', from:'桃園', to:'澳門', link:'https://www.airmacau.com.mo/' },
   { airline:'長榮航空', code:'BR801', depart:'10:00', arrive:'11:50', from:'桃園', to:'澳門', link:'https://www.evaair.com/zh-tw/' }
+  
 ];
 const flightList=document.getElementById('flightList');
 function renderFlights(){
