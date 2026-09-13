@@ -78,7 +78,7 @@ const weddingEvent = {
   start: '20270123T160000',
   end: '20270123T213000',
   location: '澳門雅辰酒店',
-  description: '16:00 麻將間入席\\n18:00 賓客入席\\n18:30 婚宴開席\\n21:30 送客合影'
+  description: '16:00 麻將間入席\\n18:00 賓客入席\\n19:00 婚宴開席\\n21:30 送客合影'
 };
 document.getElementById('addToGoogleCal').addEventListener('click', () => {
   const params = new URLSearchParams({
